@@ -1,0 +1,48 @@
+<h1>Task 1</h1>
+<h2 id="de"></h2>
+<h3>[1, 2, 3, 4, 5, 6, 7, 8, 9]</h3>
+
+<h1>Task 2</h1>
+<h3>[1, 2, 3, 4, 5, 6, 7, 8, 9,10]</h3>
+<h2 id="task2"></h2>
+
+<h1>Task 3</h1>
+<h2 id="task3"></h2>
+
+
+
+<script type="text/javascript">
+
+    //1
+    const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    for (let i = 0; i < data.length / 2; i++) {
+        const firstNumber = data[i]; //1
+        const secondNumber = data[data.length - 2 - i];
+        console.log(data[data.length - 2 - i]);
+        const sum = firstNumber + secondNumber;
+        document.getElementById("de").innerHTML += `${firstNumber}+${secondNumber}=${sum},<br>`;
+    }
+
+    //2
+    const datas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const groupedNumbers = [];
+    for (let i = 0; i < datas.length; i += 3) {
+        const group = datas.slice(i, i + 3).join("");
+        groupedNumbers.push(group);
+    }
+    const output = groupedNumbers.join(",");
+    // console.log(output);
+    document.getElementById("task2").innerHTML = output;
+
+    // 3
+    const inputArray = ["abc", "acv", "abdd", "saacdd"];
+    const startingLetter = "a";
+
+    const filteredArray = inputArray.filter(str => str.startsWith(startingLetter));
+
+    console.log(filteredArray);
+    document.getElementById("task3").innerHTML = filteredArray;
+</script>
+
+

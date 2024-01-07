@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Cubes of Elements</title>
+    <script>
+        function solve() {
+            let str = prompt("Enter array's size:");
+            let size = parseInt(str);
+
+            let array = new Array(size);
+            for (let i = 0; i < size; i++) {
+                array[i] = new Array(size);
+                for (let j = 0; j < size; j++) {
+                    array[i][j] = prompt("Enter array[" + i + "][" + j + "] =");
+                }
+            }
+            let result = "Cubes of all elements:<br>";
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < size; j++) {
+                    result += array[i][j] ** 3 + " ";
+                }
+                result += "<br>";
+            }
+
+            document.getElementById("data").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <h2>Find Cubes of Elements</h2>
+    <button onclick="solve()">Solve</button>
+    <h1 id="data"></h1>
+</body>
+</html>
